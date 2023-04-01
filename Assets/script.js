@@ -25,9 +25,7 @@ $(document).ready(function() {
     } else {
       $(this).addClass('future');
     }
-  });
-
-  $('.time-block').each(function() {
+    
     var timeBlockId = $(this).attr('id');
     var savedUserInput = localStorage.getItem(timeBlockId);
 
