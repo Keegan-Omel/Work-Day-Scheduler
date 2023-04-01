@@ -14,7 +14,6 @@ $(document).ready(function() {
 
   var currentHour = dayjs().hour();
  
-
   $('.time-block').each(function() {
     var timeBlockHour = parseInt($(this).attr('id'));
 
@@ -32,6 +31,7 @@ $(document).ready(function() {
     if (savedUserInput) {
       $(this).find('textarea').val(savedUserInput);
     }
+    
   });
 
 });
