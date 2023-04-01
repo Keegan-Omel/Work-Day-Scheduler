@@ -57,3 +57,9 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 408px) {
+  body {
+    font-size: 8px;
+  }
+}
