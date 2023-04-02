@@ -4,17 +4,16 @@ $(document).ready(function() {
 
   $('.saveBtn').on('click', function(event) {
     event.preventDefault();
-    var timeBlockId = $('.time-block').attr('id');
+    var timeBlockId = $(this).parent().attr('id');
 
-    var userInput = $('textarea').val();
+    var userInput = $(this).siblings('textarea').val();
 
     localStorage.setItem(timeBlockId, userInput);
 
   });
 
-    var currentHour = dayjs().hour();
- 
   $('.time-block').each(function() {
+    var currentHour = dayjs().hour();
     var timeBlockHour = parseInt($(this).attr('id'));
 
     if (timeBlockHour < currentHour) {
